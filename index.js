@@ -8,7 +8,7 @@ const app = express();
 const port = 3000; 
 const postData = require('./dataFiles/data.json')
 
-const allowedOrigins = ['https://visual-master-frontend.vercel.app/'];
+const allowedOrigins = ['https://visual-master-frontend.vercel.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
