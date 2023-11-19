@@ -6,7 +6,7 @@ const cors = require('cors')
 const csvFilePath = './dataFiles/data.csv';
 const app = express();
 const port = 3000; 
-
+const postData = require('./dataFiles/data.json')
 
 const allowedOrigins = ['https://visual-master-frontend.vercel.app/'];
 
@@ -47,7 +47,7 @@ app.get('/api/data',async (req, res) => {
     
         const jsonData = await csvtojson().fromString(csvData);
     
-        const filterDataValue = filterData(jsonData,age,gender,startDate,endDate)
+        const filterDataValue = filterData(postData,age,gender,startDate,endDate)
         
         res.json(filterDataValue)
 
