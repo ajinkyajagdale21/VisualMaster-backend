@@ -8,7 +8,7 @@ const app = express();
 const port = 3000; 
 
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['https://visual-master-frontend.vercel.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
