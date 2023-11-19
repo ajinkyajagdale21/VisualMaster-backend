@@ -3,7 +3,7 @@ const csvtojson = require('csvtojson');
 const fs = require('fs');
 const cors = require('cors')
 
-const csvFilePath = './dataFiles/data.csv';
+// const csvFilePath = require('./dataFiles/data.csv');
 const app = express();
 const port = 3000; 
 const postData = require('./dataFiles/data.json')
@@ -43,9 +43,9 @@ const filterData=(data,age, gender,startDate,endDate)=> {
 app.get('/api/data',async (req, res) => {
     const {age,gender,startDate,endDate} = req.query
     try {
-        const csvData = await fs.promises.readFile(csvFilePath, 'utf-8');
+        // const csvData = await fs.promises.readFile(csvFilePath, 'utf-8');
     
-        const jsonData = await csvtojson().fromString(csvData);
+        // const jsonData = await csvtojson().fromString(csvData);
     
         const filterDataValue = filterData(postData,age,gender,startDate,endDate)
         
